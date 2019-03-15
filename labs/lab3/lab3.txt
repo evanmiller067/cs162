@@ -1,0 +1,30 @@
+bool insert(int position, int val, int intList[], int& size)
+{
+	intList[size] = val;
+
+	for (int i = 0; i < size; i++)
+	{
+		if (val == intList[position])
+		{
+			return false;
+		}
+		else if (val < intList[position])
+		{
+			intList[i + 1] = intList[i];
+			intList[i] = val;
+		}
+	}
+	size++;
+
+	return true;
+}
+
+
+
+[ ]
+
+[ 25 25 4 25 ]
+-1826575232 is removed!
+-1826575232 is removed!
+
+[ 25 25 4 25 ]

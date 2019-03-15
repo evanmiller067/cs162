@@ -1,0 +1,41 @@
+./main output------------------------------------
+
+[ 58, 16, 36, 70, 45, 70, 75, 59, 49, 1 ]
+
+Amount of even numbers in array: 5
+Number to insert into array: 2
+Choose index location(0 - 10): 6 
+Modified list: 
+
+[ 58, 16, 36, 70, 45, 70, 2, 75, 59, 49, 1 ]
+
+-------------------------------------------------
+
+function implementation:
+
+int numOfEven(int list[], int size)
+{
+	int even = 0;
+
+	for (int i = 0; i < size; i++)
+	{
+		if ((list[i]%2)==0 )
+		{
+			even++;
+		}	
+	}	
+
+	return even;
+}
+
+int insert(int list[], int& size, int newInt, int position)
+{
+	for (int i = size; i > position; i--)
+	{	
+		list[i] = list[i-1];
+	}
+	list[position] = newInt;
+
+	size++;
+	return 0;
+}

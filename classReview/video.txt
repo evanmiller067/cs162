@@ -1,0 +1,7 @@
+The Lion King;28;FAMILY
+Happy Feet;16;COMEDY
+Beauty and the Beast;12;ACTION
+The Lion King;28;ACTION
+Funny Feet;16;COMEDY
+The Avengers;12;ACTION
+

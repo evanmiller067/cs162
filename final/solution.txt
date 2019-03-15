@@ -1,0 +1,42 @@
+int countEven(node * head)
+{
+        node* temp = head;
+        int even = 0;
+
+        while( temp != NULL && (temp->data % 2) == 0)
+        {
+                temp = temp->next;
+                even++;
+        }
+        return even;
+}
+
+int removeEven(node * &head)
+{
+        node **currentptr = &head;
+        int remove = 0;
+
+        while(*currentptr)
+        {
+                if((*currentptr)->data % 2)
+                {
+                        currentptr = &(*currentptr)->next;
+                        continue;
+                }
+                node * p = *currentptr;
+                *currentptr = p->next;
+                delete p;
+                remove++;
+        }
+        return remove;
+}
+
+
+//---------------------Function Output---------------------//
+
+
+Here is the original list: 2 -> 7 -> 46 -> 2 -> 81 -> 7 -> 76 -> 41 -> 48 -> 75 -> 2
+
+This list contains 11 number of items 
+ number of evens: 1
+ number of removed evens: 6

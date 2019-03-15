@@ -1,0 +1,27 @@
+Evan Miller
+Lab 2 - CS162
+
+List of bugs and corrections to file app.cpp
+
+
+Bugs:
+
+The function "determineGrade" is misspelled in the function definition and the function call in main(). 
+Added an "e" to function name.
+
+In the "determineGrade" function definition there is a "v" added to the line that is not supposed to be there.
+Removed the "v" and moved the "grade = 'A';" over to line up with rest of the function. 
+
+In the "determineGrade" function there is an extra ";" added to the end of the "else if (finalAvg >= 'C')".
+Removed the ";". 
+
+In the "printMsg" function there is a "v" inserted below the switch call. 
+Removed the "v". 
+
+In "printmsg" there isn't a closing "}" at the end of the function. 
+Added "}".
+
+In 'printMsg" the strcpy function is unsafe and could cause a buffer overflow. 
+switched strcpy to strcpy_s. 
+
+Added getchar() before the main() function returns 0 to allow user to read the cout messages. 

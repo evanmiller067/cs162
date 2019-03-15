@@ -1,0 +1,6 @@
+Ace Ventura;COMEDY;56;3.6
+Apocalypse;ACTION;2;3.4
+Banana;ACTION;12;2.5
+Star Wars;ACTION;23;5
+The Lion King;FAMILY;23;4.5
+Zootopia;FAMILY;1;2.3

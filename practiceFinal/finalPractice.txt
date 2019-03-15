@@ -1,0 +1,46 @@
+int sumOfList(node * head)
+{
+//compute and return the sum of intergers in the liked list
+
+        int sum = 0;
+
+        node *runner = head;
+
+        while(runner->next!=NULL)
+        {
+                sum+=runner->data;
+                runner = runner->next;
+        }
+        return sum;
+}
+void insert(node *& head, int position, int newInt)
+{
+//insert newInt at index "position" where index starts at 0
+int count = 0;
+node *runner = head;
+while(count!=position-1)
+{
+        runner = runner->next;
+        count++;
+}
+node * newNode=(struct node*)malloc(sizeof(struct node));
+newNode->data = newInt;
+newNode->next = runner->next;
+runner->next = newNode;
+}
+
+
+
+---------------------------------------------------Program output-------------------------------------------------------------
+
+
+Here is the original list: 2 -> 35 -> 25 -> 43 -> 23 -> 1 -> 62 -> 65 -> 2 -> 23 -> 17 -> 77 -> 55 -> 1 -> 61 -> 58 -> 37 -> 61 -> 90 -> 25 -> 90 -> 2
+
+This list contains 22 number of items 
+list after insertion is: 
+
+
+The resulting list is... 2 -> 35 -> 25 -> 7 -> 43 -> 23 -> 1 -> 62 -> 65 -> 2 -> 23 -> 17 -> 77 -> 55 -> 1 -> 61 -> 58 -> 37 -> 61 -> 90 -> 25 -> 90 -> 2
+
+This list contains 23 number of items 
+The sum of all data is: 862

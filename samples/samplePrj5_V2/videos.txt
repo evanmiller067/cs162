@@ -1,0 +1,4 @@
+Apocalypse;ACTION;2;3.4
+Batman;ACTION;22;4.5
+Star Wars;ACTION;23;5
+The Lion King;FAMILY;23;4.5

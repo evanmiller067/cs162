@@ -1,0 +1,65 @@
+-------------------------------------------------------------------------------
+			student.cpp
+-------------------------------------------------------------------------------
+
+Student::print() const
+{
+        cout << id << '\t' << gpa << endl;
+}
+
+Student::Student(const char initId[], double gpa)
+{
+        strcpy(id, initId);
+        this->gpa = gpa;
+}
+
+bool Student::isLessThanByID(const Student& aStudent) const
+{
+        if ((strcmp(this->id, aStudent.id)) < 0)
+        {
+                return true;
+        }
+        else
+        {
+                return false;
+        }
+}
+
+bool Student::qualifyForHonor(double minGpaForHonor) const
+{
+        if (gpa >= minGpaForHonor)
+        {
+                return true;
+        }
+        else
+        {
+                return false;
+        }
+}
+
+-------------------------------------------------------------------------------
+			app.cpp
+-------------------------------------------------------------------------------
+
+	//Write code to test bool Student::isLessThanByID
+
+	cout << "Less than By ID function: " << s1.isLessThanByID(s2) << endl;
+
+        //Write code to test Student::qualifyForHonor
+
+        cout << " Student One qualified for Honor: " << s1.qualifyForHonor(3.5) << endl;
+
+        cout << " Student Two qualified for Honor: " << s2.qualifyForHonor(4.0) << endl;
+
+        return 0;
+
+-------------------------------------------------------------------------------
+			program output
+-------------------------------------------------------------------------------
+
+
+G10	3.9
+G20	3.5
+ Less than By ID function: 1
+ Student One qualified for Honor: 1
+ Student Two qualified for Honor: 0
